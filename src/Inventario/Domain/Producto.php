@@ -45,4 +45,11 @@ abstract class Producto
     public function getCantidad(): int {
         return $this->cantidad;
     }
+
+    /**
+     * @param int $cantidad
+     */
+    public function setCantidad(int $cantidad): void {
+        $this->cantidad = $cantidad;
+    }
 }

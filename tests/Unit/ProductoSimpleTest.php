@@ -27,8 +27,26 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testCantidadEntradaNegativaCero(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro',2000,5000,5,'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
         $result = $productoSimple->entrada(0);
         $this->assertEquals('La cantidad es incorrecta', $result);
+    }
+
+    /**
+     * Escenario:  Registro de entrada correcto
+     * HU 1. COMO USUARIO QUIERO REGISTRAR LA ENTRADA PRODUCTOS
+     * Criterio de Aceptación:
+     * 1. La cantidad de la entrada de debe ser mayor a 0.
+     * 2. La cantidad de la entrada se le aumentará a la cantidad existente del producto
+     * Dado
+     * El usuario tiene un producto con el nombre “gaseosa litro”, costo “2000”, precio “5000” cantidad “5” preparación “NO”
+     * Cuando    va a dar una nueva entrada con una cantidad de 6
+     * Entonces    El sistema registrará la entrada AND presentará el mensaje. “El uevo stock del producto gaseosa litro es 11”.
+     * @test
+     */
+    public function testEntradaCorrecta(): void {
+        $productoSimple = new ProductoSimple('gaseosa litro',2000,5000,5,'NO');
+        $result = $productoSimple->entrada(6);
+        $this->assertEquals('El nuevo stock del producto gaseosa litro es 11');
     }
 }

@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Primer caso de prueba">
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/Iinventario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Primer caso de prueba v2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601920705472</updated>
       <workItem from="1601920707048" duration="2394000" />
-      <workItem from="1601924788739" duration="2105000" />
+      <workItem from="1601924788739" duration="4143000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601924862774</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Primer caso de prueba v2.0">
+      <created>1601926951910</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601926951910</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +215,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer caso de prueba" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer caso de prueba" />
+    <MESSAGE value="Primer caso de prueba v2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer caso de prueba v2.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1601921608442">
@@ -220,9 +227,13 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1601925828957" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601924872314">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601926963914">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601924872314" />
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601926963914" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1601929714162">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1601929714162" />
   </component>
 </project>

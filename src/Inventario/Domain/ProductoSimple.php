@@ -26,6 +26,13 @@ class ProductoSimple extends Producto
 
     public function salida(int $cantidad) {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
+
+        if($cantidad > 0){
+            $salida = new MovimientoInventario($this->getNombre(),$this->getCosto(),$this->getPrecio(),$cantidad,'SALIDA');
+            $cant = $this->getCantidad() - $cantidad;
+            $this->setCantidad($cantidad);
+            return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
+        }
     }
 
 

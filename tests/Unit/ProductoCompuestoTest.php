@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Src\Inventario\Domain\ProductoCompuesto;
 use Src\Inventario\Domain\ProductoSimple;
 
 class ProductoCompuestoTest extends TestCase
@@ -34,11 +35,12 @@ class ProductoCompuestoTest extends TestCase
      */
     public function testSalidaCorrectaProductoCompuesto(): void {
         $ingredientes = [];
-        $ingredientes[] = new ProductoSimple('salchica', 1000, null, 4, 'SI');
-        $ingredientes[] = new ProductoSimple('pan perro', 1000, null, 3, 'SI');
-        $ingredientes[] = new ProductoSimple('lamina queso', 1000, null, 5, 'SI');
-        $productoCompuesto = new ProductoCompuest($ingredientes, 5000);
-        $result = $productoCompuesto->salida();
+        $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('lamina queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
+        //var_dump($ingredientes);
+        $productoCompuesto = new ProductoCompuesto('perro sencillo', null, 5000, 1, $ingredientes);
+        $result = $productoCompuesto->salida(1);
         self::assertEquals('El Nuevo stock de los productos: salchicha es 3, pan perro es 2, lamina de queso es 4', $result);
     }
 }

@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Cuarto caso de prueba v2.0">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Quinto caso de prueba v1.0">
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ventas" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -160,6 +161,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -178,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601920705472</updated>
       <workItem from="1601920707048" duration="2394000" />
-      <workItem from="1601924788739" duration="8426000" />
+      <workItem from="1601924788739" duration="13834000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -236,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601932816324</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Quinto caso de prueba v1.0">
+      <created>1601934628160</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601934628160</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,17 +271,22 @@
     <MESSAGE value="Tercer caso de prueba v2.0" />
     <MESSAGE value="Cuarto caso de prueba v1.0" />
     <MESSAGE value="Cuarto caso de prueba v2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cuarto caso de prueba v2.0" />
+    <MESSAGE value="Quinto caso de prueba v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quinto caso de prueba v1.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1601921608442">
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1601936043792">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1601921608442" />
-    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1601925828957">
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1601936043792" />
+    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1601935477868">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1601925828957" />
+    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1601935477868" />
+    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1601934657538">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1601934657538" />
     <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

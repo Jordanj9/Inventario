@@ -8,7 +8,7 @@ class ProductoSimple extends Producto
 {
     private $tipo;
 
-    public function __construct(string $nombre, float $costo, float $precio, int $cantidad, string $tipo) {
+    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad,string $tipo) {
         parent::__construct($nombre, $costo, $precio, $cantidad);
         $this->tipo = $tipo;
     }
@@ -22,7 +22,6 @@ class ProductoSimple extends Producto
             $this->setCantidad($cant);
             return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
         }
-
     }
 
 

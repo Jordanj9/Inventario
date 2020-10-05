@@ -12,9 +12,9 @@ class ProductoSimpleTest extends TestCase
      *
      * @return void
      */
-    public function testExample() {
-        $this->assertTrue(true);
-    }
+//    public function testExample() {
+//        $this->assertTrue(true);
+//    }
 
     /**
      * Escenario:  Cantidad de entrada negativa o cero
@@ -45,8 +45,25 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testEntradaCorrecta(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro',2000,5000,5,'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
         $result = $productoSimple->entrada(6);
-        $this->assertEquals('El nuevo stock del producto gaseosa litro es 11',$result);
+        $this->assertEquals('El nuevo stock del producto gaseosa litro es 11', $result);
+    }
+
+    /**
+     * Escenario:  Cantidad de salida negativa o cero
+     * HU 1. COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS
+     * Criterio de Aceptación:
+     * 1. La cantidad de la de debe ser mayor a 0.
+     * Dado El usuario tiene un producto con el nombre “gaseosa litro”, costo “2000”, precio “5000” cantidad “5” preparación “NO”
+     * Cuando va a registrar la salida con una cantidad de 0
+     * Entonces El sistema presentará el mensaje. “La cantidad es incorrecta”.
+     * @test
+     */
+    public function testCantidadSalidaNegativaCero(): void {
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
+        $result = $productoSimple->salida(0);
+        $this->assertEquals('La cantidad es incorrecta', $result);
+
     }
 }

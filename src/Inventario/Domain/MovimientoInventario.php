@@ -6,15 +6,15 @@ namespace Src\Inventario\Domain;
 
 class MovimientoInventario
 {
-    //private $numero;
+    private $numero = 0;
     private $nombre_producto;
     private $costo;
     private $precio;
     private $cantidad;
     private $tipo;
 
-    public function __construct(string $nombre_producto, float $costo, float $precio, int $cantidad, string $tipo) {
-       // $this->numero = $numero;
+    public function __construct(string $nombre_producto, float $costo, float $precio = null, int $cantidad, string $tipo) {
+       $this->numero = $this->numero + 1;
         $this->nombre_producto = $nombre_producto;
         $this->costo = $costo;
         $this->precio = $precio;

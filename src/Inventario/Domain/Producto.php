@@ -11,7 +11,7 @@ abstract class Producto
     private $precio;
     private $cantidad;
 
-    public function __construct(string $nombre, float $costo, float $precio, int $cantidad) {
+    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad) {
         $this->nombre = $nombre;
         $this->costo = $costo;
         $this->precio = $precio;

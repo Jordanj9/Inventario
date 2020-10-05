@@ -6,6 +6,6 @@ namespace Src\Inventario\Domain;
 
 interface Iinventario
 {
-    public function salida();
+    public function salida(int $cantidad);
 
 }

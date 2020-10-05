@@ -64,6 +64,5 @@ class ProductoSimpleTest extends TestCase
         $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
         $result = $productoSimple->salida(0);
         $this->assertEquals('La cantidad es incorrecta', $result);
-
     }
 }

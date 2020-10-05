@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Segundo caso de prueba v2.0">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Tercer caso de prueba v1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/Iinventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/Iinventario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
@@ -181,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601920705472</updated>
       <workItem from="1601920707048" duration="2394000" />
-      <workItem from="1601924788739" duration="5591000" />
+      <workItem from="1601924788739" duration="5857000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -211,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601930367696</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tercer caso de prueba v1.0">
+      <created>1601931720469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601931720470</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +240,8 @@
     <MESSAGE value="Primer caso de prueba v2.0" />
     <MESSAGE value="Segundo caso de prueba v1.0" />
     <MESSAGE value="Segundo caso de prueba v2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Segundo caso de prueba v2.0" />
+    <MESSAGE value="Tercer caso de prueba v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tercer caso de prueba v1.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1601921608442">
@@ -244,10 +252,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1601925828957" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601930375069">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601931732471">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601930375069" />
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601931732471" />
     <state x="346" y="89" key="search.everywhere.popup" timestamp="1601929714162">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

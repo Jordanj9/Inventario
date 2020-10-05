@@ -4,7 +4,7 @@
 namespace Src\Inventario\Domain;
 
 
-abstract class Producto
+abstract class Producto implements Iinventario
 {
     private $nombre;
     private $costo;

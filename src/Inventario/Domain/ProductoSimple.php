@@ -20,7 +20,7 @@ class ProductoSimple extends Producto
             $entrada = new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, 'ENTRADA');
             $cant = $this->getCantidad() + $cantidad;
             $this->setCantidad($cant);
-            return sprintf("El nuevo stock del producto %s es %s pesos m/c", $this->getNombre(), $this->getCantidad());
+            return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
         }
 
     }

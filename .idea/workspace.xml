@@ -22,7 +22,6 @@
     <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de codigo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601920705472</updated>
       <workItem from="1601920707048" duration="2394000" />
-      <workItem from="1601924788739" duration="22670000" />
+      <workItem from="1601924788739" duration="23482000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601948832479</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactorización de codigo">
+      <created>1601950691934</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1601950691934</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,10 +334,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601948839479">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601950700624">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601948839479" />
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601950700624" />
     <state x="346" y="89" key="search.everywhere.popup" timestamp="1601932034524">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

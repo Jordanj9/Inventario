@@ -48,28 +48,33 @@ class ProductoCompuesto extends Producto
     public function salida(int $cantidad) {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
-
         if ($cantidad > 0 && count($this->ingredientes) > 0) {
-            $message = 'El Nuevo stock de los productos: ';
-            foreach ($this->ingredientes as $ingrediente) {
-                if (is_a($ingrediente['producto'], ProductoSimple::class)) {
-                    $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
-                    $ingrediente['producto']->setCantidad($cant);
-                    $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
-                } else {
-                    var_dump($this->getCosto());
-                    foreach ($ingrediente['producto']->getIngredientes() as $item) {
-                        $cant = $item['producto']->getCantidad() - ($item['cantidad'] * $cantidad);
-                        $item['producto']->setCantidad($cant);
-                        $message = $message . $item['producto']->getNombre() . ' es ' . $item['producto']->getCantidad() . ', ';
-                    }
-                }
-            }
+            $message = $this->disminuirCantidad($cantidad);
+            $this->AddMovimiento($cantidad);
             $message = substr($message, 0, -2);
-
             return $message;
         }
     }
+
+    private function disminuirCantidad(int $cantidad): string {
+        $message = 'El Nuevo stock de los productos: ';
+        foreach ($this->ingredientes as $ingrediente) {
+            if (is_a($ingrediente['producto'], ProductoSimple::class)) {
+                $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
+                $ingrediente['producto']->setCantidad($cant);
+                $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
+            } else {
+                foreach ($ingrediente['producto']->getIngredientes() as $item) {
+                    //var_dump($item);
+                    $cant = $item['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
+                    $item['producto']->setCantidad($cant);
+                    $message = $message . $item['producto']->getNombre() . ' es ' . $item['producto']->getCantidad() . ', ';
+                }
+            }
+        }
+        return $message;
+    }
+
 
     private function AddMovimiento($cantidad): void {
         new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, 'SALIDA');

@@ -14,7 +14,7 @@ class ProductoSimple extends Producto
         $this->tipo = $tipo;
     }
 
-    public function entrada(int $cantidad): string {
+    private function entrada(int $cantidad): string {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
         if ($cantidad > 0) {

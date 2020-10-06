@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Quinto caso de prueba v2.0">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de codigo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601920705472</updated>
       <workItem from="1601920707048" duration="2394000" />
-      <workItem from="1601924788739" duration="17008000" />
+      <workItem from="1601924788739" duration="18818000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -255,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601939989230</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactorización de codigo">
+      <created>1601945032961</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601945032961</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +287,8 @@
     <MESSAGE value="Cuarto caso de prueba v2.0" />
     <MESSAGE value="Quinto caso de prueba v1.0" />
     <MESSAGE value="Quinto caso de prueba v2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quinto caso de prueba v2.0" />
+    <MESSAGE value="Refactorización de codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactorización de codigo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1601936043792">
@@ -302,10 +307,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601940002528">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601945044286">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601940002528" />
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601945044286" />
     <state x="346" y="89" key="search.everywhere.popup" timestamp="1601932034524">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

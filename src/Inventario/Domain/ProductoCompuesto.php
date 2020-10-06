@@ -10,23 +10,25 @@ use PhpParser\Node\Expr\Array_;
 class ProductoCompuesto extends Producto
 {
     private $combo;
-    private $productosSimples = [];
+    private $ingredientes = [];
 
 
-    public function __construct(string $nombre, float $costo = null, float $precio = null, int $cantidad = null, array $productosSimples, string $combo) {
-        if (count($productosSimples) > 0) {
-            foreach ($productosSimples as $item) {
+    public function __construct(string $nombre, float $costo = null, float $precio = null, int $cantidad = null, array $ingredientes, string $combo) {
+        if (count($ingredientes) > 0) {
+            foreach ($ingredientes as $item) {
                 if (is_a($item['producto'], ProductoSimple::class)) {
                     $costo = $costo + ($item['producto']->getCosto() * $item['cantidad']);
                 } else {
-                    var_dump('no sirve');
+                    foreach ($item['producto']->getIgredientes() as $value){
+                        $costo = $costo + ($value['producto']->getCosto() * $value['cantidad']);
+                    }
                 }
             }
         } else {
             return 'Debe seleccionar los ingredientes.';
         }
         parent::__construct($nombre, $costo, $precio, $cantidad);
-        $this->productosSimples = $productosSimples;
+        $this->ingredientes = $ingredientes;
         $this->combo = $combo;
     }
 
@@ -34,15 +36,15 @@ class ProductoCompuesto extends Producto
      * @return string[]
      */
     public function getIngredientes(): array {
-        return $this->productosSimples;
+        return $this->ingredientes;
     }
 
     public function salida(int $cantidad) {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
-        if ($cantidad > 0 && count($this->productosSimples) > 0) {
+        if ($cantidad > 0 && count($this->ingredientes) > 0) {
             $message = 'El Nuevo stock de los productos: ';
-            foreach ($this->productosSimples as $ingrediente) {
+            foreach ($this->ingredientes as $ingrediente) {
                 $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
                 $ingrediente['producto']->setCantidad($cant);
                 $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';

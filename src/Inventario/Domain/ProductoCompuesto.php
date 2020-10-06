@@ -15,21 +15,27 @@ class ProductoCompuesto extends Producto
 
     public function __construct(string $nombre, float $costo = null, float $precio = null, int $cantidad = null, array $ingredientes, string $combo) {
         if (count($ingredientes) > 0) {
-            foreach ($ingredientes as $item) {
-                if (is_a($item['producto'], ProductoSimple::class)) {
-                    $costo = $costo + ($item['producto']->getCosto() * $item['cantidad']);
-                } else {
-                    foreach ($item['producto']->getIgredientes() as $value){
-                        $costo = $costo + ($value['producto']->getCosto() * $value['cantidad']);
-                    }
-                }
-            }
+            $costo = $this->calcularCosto($ingredientes);
         } else {
             return 'Debe seleccionar los ingredientes.';
         }
         parent::__construct($nombre, $costo, $precio, $cantidad);
         $this->ingredientes = $ingredientes;
         $this->combo = $combo;
+    }
+
+    private function calcularCosto(array $ingredientes) {
+        $costo = 0;
+        foreach ($ingredientes as $item) {
+            if (is_a($item['producto'], ProductoSimple::class)) {
+                $costo = $costo + ($item['producto']->getCosto() * $item['cantidad']);
+            } else {
+                foreach ($item['producto']->getIgredientes() as $value) {
+                    $costo = $costo + ($value['producto']->getCosto() * $value['cantidad']);
+                }
+            }
+        }
+        return $costo;
     }
 
     /**
@@ -45,9 +51,17 @@ class ProductoCompuesto extends Producto
         if ($cantidad > 0 && count($this->ingredientes) > 0) {
             $message = 'El Nuevo stock de los productos: ';
             foreach ($this->ingredientes as $ingrediente) {
-                $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
-                $ingrediente['producto']->setCantidad($cant);
-                $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
+                if (is_a($ingrediente['producto'], ProductoSimple::class)) {
+                    $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
+                    $ingrediente['producto']->setCantidad($cant);
+                    $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
+                } else {
+                    foreach ($ingrediente['producto']->getIngredientes() as $item) {
+                        $cant = $item['producto']->getCantidad() - ($item['cantidad'] * $cantidad);
+                        $item['producto']->setCantidad($cant);
+                        $message = $message . $item['producto']->getNombre() . ' es ' . $item['producto']->getCantidad() . ', ';
+                    }
+                }
             }
             $message = substr($message, 0, -2);
 

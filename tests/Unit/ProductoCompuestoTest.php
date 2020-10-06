@@ -44,9 +44,6 @@ class ProductoCompuestoTest extends TestCase
         $result = $productoCompuesto->salida(1);
         self::assertEquals('El Nuevo stock de los productos: salchicha es 3, pan perro es 2, lamina de queso es 4', $result);
     }
-    /**
-     * @aquiestoy:) <<<<<<<=============
-     */
 
     /**
      * Escenario: Salida correcta de productos compuestos tipo combo
@@ -77,4 +74,5 @@ class ProductoCompuestoTest extends TestCase
         $result = $productoCompuesto->salida(1);
         self::assertEquals('El Nuevo stock de los productos: gaseosa litro es 1, salchicha es 2, pan perro es 1, lamina de queso es 3', $result);
     }
+
 }

@@ -72,6 +72,7 @@ class ProductoSimpleTest extends TestCase
      * Criterio de Aceptación:
      * 1. La cantidad de la de debe ser mayor a 0.
      * 2. En caso de un producto sencillo la cantidad de la salida se le disminuirá a la cantidad existente del producto.
+     * 3. Cada salida debe registrar el costo del producto y el precio de la venta
      * Dado
      * El usurario tiene un producto con el nombre “gaseosa litro”, costo “2000”, precio “5000” cantidad “4”
      * Cuando    va a registrar la salida con una cantidad de 2

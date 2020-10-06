@@ -21,8 +21,10 @@ class ProductoCompuestoTest extends TestCase
      * Escenario: Salida correcta de productos compuestos
      * HU 1. COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS
      * Criterio de Aceptación:
-     * 1   La cantidad de la de debe ser mayor a 0.
-     * 3   En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente de cada uno de su ingrediente
+     * 1. La cantidad de la de debe ser mayor a 0.
+     * 2. Cada salida debe registrar el costo del producto y el precio de la venta
+     * 3. En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente de cada uno de su ingrediente
+     * 4. El costo de los productos compuestos corresponden al costo de sus ingredientes por la cantidad de estos.
      * Dado
      * El usurario tiene los siguientes productos
      * un producto con el nombre “salchicha”, costo “1000”, cantidad “4”
@@ -34,12 +36,11 @@ class ProductoCompuestoTest extends TestCase
      * @test
      */
     public function testSalidaCorrectaProductoCompuesto(): void {
-        $ingredientes = [];
         $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 'SI'), 'cantidad' => 1];
         $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3, 'SI'), 'cantidad' => 1];
-        $ingredientes[] = ['producto' => new ProductoSimple('lamina queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
-        //var_dump($ingredientes);
-        $productoCompuesto = new ProductoCompuesto('perro sencillo', null, 5000, 1, $ingredientes);
+        $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
+
+        $productoCompuesto = new ProductoCompuesto('perro sencillo', null, 5000,0, $ingredientes,'NO');
         $result = $productoCompuesto->salida(1);
         self::assertEquals('El Nuevo stock de los productos: salchicha es 3, pan perro es 2, lamina de queso es 4', $result);
     }

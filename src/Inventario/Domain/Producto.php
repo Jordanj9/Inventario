@@ -11,7 +11,7 @@ abstract class Producto implements Iinventario
     private $precio;
     private $cantidad;
 
-    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad) {
+    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad = null) {
         $this->nombre = $nombre;
         $this->costo = $costo;
         $this->precio = $precio;

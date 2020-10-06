@@ -9,6 +9,7 @@ class ProductoSimple extends Producto
     private $tipo;
 
     public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad, string $tipo) {
+        if($cantidad == null) return 'La cantidad es incorrecta';
         parent::__construct($nombre, $costo, $precio, $cantidad);
         $this->tipo = $tipo;
     }
@@ -17,7 +18,7 @@ class ProductoSimple extends Producto
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
         if ($cantidad > 0) {
-            $entrada = new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, 'ENTRADA');
+            $this->AddMovimiento($cantidad,'ENTRADA');
             $cant = $this->getCantidad() + $cantidad;
             $this->setCantidad($cant);
             return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
@@ -28,11 +29,15 @@ class ProductoSimple extends Producto
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
         if($cantidad > 0){
-            $salida = new MovimientoInventario($this->getNombre(),$this->getCosto(),$this->getPrecio(),$cantidad,'SALIDA');
+            $this->AddMovimiento($cantidad,'SALIDA');
             $cant = $this->getCantidad() - $cantidad;
-            $this->setCantidad($cantidad);
+            $this->setCantidad($cant);
             return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
         }
+    }
+
+    private function AddMovimiento(int $cantidad,string $tipo):void{
+        new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, $tipo);
     }
 
 

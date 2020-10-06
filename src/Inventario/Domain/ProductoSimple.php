@@ -6,15 +6,15 @@ namespace Src\Inventario\Domain;
 
 class ProductoSimple extends Producto
 {
-    private $tipo;
+    private $preparacion;
 
-    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad, string $tipo) {
+    public function __construct(string $nombre, float $costo, float $precio = null, int $cantidad, string $preparacion) {
         if($cantidad == null) return 'La cantidad es incorrecta';
         parent::__construct($nombre, $costo, $precio, $cantidad);
-        $this->tipo = $tipo;
+        $this->preparacion = $preparacion;
     }
 
-    private function entrada(int $cantidad): string {
+    public function entrada(int $cantidad): string {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
         if ($cantidad > 0) {
@@ -38,6 +38,13 @@ class ProductoSimple extends Producto
 
     private function AddMovimiento(int $cantidad,string $tipo):void{
         new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, $tipo);
+    }
+
+    /**
+     * @return string
+     */
+    public function getPreparacion(): string {
+        return $this->preparacion;
     }
 
 

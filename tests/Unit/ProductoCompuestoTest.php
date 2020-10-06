@@ -68,12 +68,12 @@ class ProductoCompuestoTest extends TestCase
      * @test
      */
     public function testSalidaCorrectaProductoCompuestoCombo(): void {
-        $ingredientes[] = ['producto' => new ProductoSimple('gaseosa litro', 2000, 5000, 2, 'SI'), 'cantidad' => 1];
         $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 'SI'), 'cantidad' => 1];
         $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3, 'SI'), 'cantidad' => 1];
         $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
-
-        $productoCompuesto = new ProductoCompuesto('Combo para parejas', null, 5000, 0, $ingredientes, 'NO');
+        $combo[] = ['producto' => new ProductoSimple('gaseosa litro', 2000, 5000, 2, 'NO'), 'cantidad' => 1];
+        $combo[] = ['producto' => new ProductoCompuesto('perro sencillo', null, 5000, 0, $ingredientes, 'NO'), 'cantidad' => 2];
+        $productoCompuesto = new ProductoCompuesto('Combo para parejas', null, 12000, 0, $combo, 'SI');
         $result = $productoCompuesto->salida(1);
         self::assertEquals('El Nuevo stock de los productos: gaseosa litro es 1, salchicha es 2, pan perro es 1, lamina de queso es 3', $result);
     }

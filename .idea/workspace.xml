@@ -19,11 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Inicio segundo parcial">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductoSimpleTest.php">
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Aplication/ProductoSimpleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/Eloquent/ProductosimpleModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +203,7 @@
       <workItem from="1602107868211" duration="556000" />
       <workItem from="1602168998686" duration="8206000" />
       <workItem from="1602948065248" duration="732000" />
-      <workItem from="1604930152391" duration="5389000" />
+      <workItem from="1604930152391" duration="7567000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -326,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604930271270</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="GuardarProductoSimpleTest.php">
+      <created>1604938050718</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1604938050718</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,32 +369,37 @@
     <MESSAGE value="Quinto caso de prueba v2.0" />
     <MESSAGE value="Refactorización de codigo" />
     <MESSAGE value="Inicio segundo parcial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio segundo parcial" />
+    <MESSAGE value="GuardarProductoSimpleTest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductoSimpleTest.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1601936043792">
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604939594561">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1601936043792" />
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1604939594561" />
+    <state x="364" y="315" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604938381749">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="364" y="315" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.30.1366.738@0.30.1366.738" timestamp="1604938381749" />
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1604936941152">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1604936941152" />
-    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604936207761">
+    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604939526136">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604936207761" />
+    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604939526136" />
     <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604930280945">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604938055057">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604930280945" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604937361771">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604938055057" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604938249560">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604937361771" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604938249560" />
   </component>
 </project>

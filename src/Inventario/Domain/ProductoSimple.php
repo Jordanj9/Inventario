@@ -59,5 +59,15 @@ class ProductoSimple extends Producto
         return $this->preparacion;
     }
 
+    public function toArray()
+    {
+        return [
+            'nombre' => $this->getNombre(),
+            'costo' => $this->getCosto(),
+            'precio' => $this->getPrecio(),
+            'cantidad' => $this->getCantidad(),
+            'preparacion' => $this->getPreparacion()
+        ];
+    }
 
 }

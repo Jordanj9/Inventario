@@ -22,11 +22,11 @@ class ProductoSimpleRequest
      */
     public function __construct(string $nombre, float $costo, float $precio = 0, int $cantidad, string $preparacion)
     {
-        $this->nombre = $nombre;
+        $this->nombre = strtoupper($nombre);
         $this->costo = $costo;
         $this->precio = $precio;
         $this->cantidad = $cantidad;
-        $this->preparacion = $preparacion;
+        $this->preparacion = strtoupper($preparacion);
     }
 
     /**

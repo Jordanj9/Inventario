@@ -4,11 +4,14 @@
 namespace Productosimple;
 
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
 class GuardarProductoSimpleTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * @test
      */

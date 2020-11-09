@@ -15,15 +15,15 @@ class ProductoSimple extends Producto
         $this->preparacion = $preparacion;
     }
 
-    public function entrada(int $cantidad): string
+    public function entrada(int $cantidad)
     {
         if ($cantidad <= 0) return 'La cantidad es incorrecta';
 
         if ($cantidad > 0) {
-            $this->AddMovimiento($cantidad, 'ENTRADA');
+            $movimiento = $this->AddMovimiento($cantidad, 'ENTRADA');
             $cant = $this->getCantidad() + $cantidad;
             $this->setCantidad($cant);
-            return sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad());
+            return ['mensaje'=>sprintf("El nuevo stock del producto %s es %s", $this->getNombre(), $this->getCantidad()), 'movimiento'=>$movimiento];
         }
     }
 
@@ -46,9 +46,9 @@ class ProductoSimple extends Producto
         $this->setCantidad($cant);
     }
 
-    private function AddMovimiento(int $cantidad, string $tipo): void
+    private function AddMovimiento(int $cantidad, string $tipo): MovimientoInventario
     {
-        new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, $tipo);
+       return new MovimientoInventario($this->getNombre(), $this->getCosto(), $this->getPrecio(), $cantidad, $tipo);
     }
 
     /**
@@ -59,7 +59,7 @@ class ProductoSimple extends Producto
         return $this->preparacion;
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'nombre' => $this->getNombre(),
@@ -68,6 +68,11 @@ class ProductoSimple extends Producto
             'cantidad' => $this->getCantidad(),
             'preparacion' => $this->getPreparacion()
         ];
+    }
+
+    static function formtArray(array $model): self
+    {
+        return new self($model['nombre'], $model['costo'], $model['precio'], $model['cantidad'], $model['preparacion']);
     }
 
 }

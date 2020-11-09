@@ -47,7 +47,7 @@ class ProductoSimpleTest extends TestCase
     public function testEntradaCorrecta(): void {
         $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
         $result = $productoSimple->entrada(6);
-        $this->assertEquals('El nuevo stock del producto gaseosa litro es 11', $result);
+        $this->assertEquals('El nuevo stock del producto gaseosa litro es 11', $result['mensaje']);
     }
 
     /**

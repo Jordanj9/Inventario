@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/productosimple', 'Simple\ProductosimplePostComtroller@guardar');
+Route::post('/productosimple', 'Simple\ProductosimplePostController');

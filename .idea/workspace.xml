@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de codigo">
-      <change beforePath="$PROJECT_DIR$/.idea/Inventario.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Inventario.iml" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Inicio segundo parcial">
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cantera" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -197,6 +198,7 @@
       <workItem from="1602107868211" duration="556000" />
       <workItem from="1602168998686" duration="8206000" />
       <workItem from="1602948065248" duration="732000" />
+      <workItem from="1604930152391" duration="5389000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -317,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601952363922</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Inicio segundo parcial">
+      <created>1604930271269</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604930271270</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,32 +356,33 @@
     <MESSAGE value="Quinto caso de prueba v1.0" />
     <MESSAGE value="Quinto caso de prueba v2.0" />
     <MESSAGE value="Refactorización de codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorización de codigo" />
+    <MESSAGE value="Inicio segundo parcial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicio segundo parcial" />
   </component>
   <component name="WindowStateProjectService">
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1601936043792">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1601936043792" />
-    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1602202368899">
+    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1604936941152">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1602202368899" />
-    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1601934657538">
+    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1604936941152" />
+    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604936207761">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1601934657538" />
+    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604936207761" />
     <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1601952372247">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604930280945">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1601952372247" />
-    <state x="346" y="89" key="search.everywhere.popup" timestamp="1601932034524">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604930280945" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604937361771">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1601932034524" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604937361771" />
   </component>
 </project>

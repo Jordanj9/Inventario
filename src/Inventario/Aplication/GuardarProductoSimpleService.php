@@ -40,7 +40,6 @@ class GuardarProductoSimpleService
             $this->repository->save($producto);
             $this->repository->addEntrada($producto, $producto->getCantidad());
             $this->unitOfWork->commit();
-            return 'entro';
         } catch (Exception $exception) {
             $this->unitOfWork->rollback();
             return $exception->getMessage();

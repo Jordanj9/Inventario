@@ -19,27 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductoSimpleTest.php 3.0">
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Shared/Domain/IUnitOfWork.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Shared/Infracestructura/UnitOfWorkEloquent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/ProductosimpleModuleTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/DuplicatorMother.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/IntegerMother.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/MotherCreator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/NationalCodeMother.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/RandomElementPicker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/Repeater.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/TestUtils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/WordMother.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Infrastructure/Mockery/MatcherIsSimilar.php" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductosimpleServiceTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoDuplicado.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoDuplicado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Shared/DomainError.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Shared/Domain/DomainError.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +206,7 @@
       <workItem from="1602107868211" duration="556000" />
       <workItem from="1602168998686" duration="8206000" />
       <workItem from="1602948065248" duration="732000" />
-      <workItem from="1604930152391" duration="22718000" />
+      <workItem from="1604930152391" duration="24325000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -371,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604952176288</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="GuardarProductosimpleServiceTest.php">
+      <created>1604957823208</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1604957823209</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +396,8 @@
     <MESSAGE value="GuardarProductoSimpleTest.php" />
     <MESSAGE value="GuardarProductoSimpleTest.php 2.0" />
     <MESSAGE value="GuardarProductoSimpleTest.php 3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductoSimpleTest.php 3.0" />
+    <MESSAGE value="GuardarProductosimpleServiceTest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductosimpleServiceTest.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604952920748">
@@ -436,10 +428,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604952193619">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604957845123">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604952193619" />
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604957845123" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604953189179">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

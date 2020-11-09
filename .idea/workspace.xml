@@ -19,25 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductoSimpleTest.php 2.0">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_172222_create_productosimple_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_191237_create_movimientoinventarios_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoDuplicado.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/Eloquent/MovimientoInventarioModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventario/Shared/DomainError.php" afterDir="false" />
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductoSimpleTest.php 3.0">
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Shared/Domain/IUnitOfWork.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Shared/Infracestructura/UnitOfWorkEloquent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/ProductosimpleModuleTestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/DuplicatorMother.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/IntegerMother.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/MotherCreator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/NationalCodeMother.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/RandomElementPicker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/Repeater.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/TestUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Domain/WordMother.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Shared/Infrastructure/Mockery/MatcherIsSimilar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/ProductoSimpleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/ProductoSimpleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/MovimientoInventario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/Eloquent/ProductosimpleModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/Eloquent/ProductosimpleModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoDuplicado.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoDuplicado.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Shared/DomainError.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Shared/Domain/DomainError.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +171,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cantera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Unit" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,6 +182,15 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Inventario\tests\Unit" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Inventario\src\Inventario\Shared\Domain" />
+      <recent name="C:\xampp\htdocs\Inventario\src\Inventario\Shared\Aplication" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -211,7 +222,7 @@
       <workItem from="1602107868211" duration="556000" />
       <workItem from="1602168998686" duration="8206000" />
       <workItem from="1602948065248" duration="732000" />
-      <workItem from="1604930152391" duration="17159000" />
+      <workItem from="1604930152391" duration="22718000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -353,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604940081562</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="GuardarProductoSimpleTest.php 3.0">
+      <created>1604952176287</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1604952176288</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,40 +404,45 @@
     <MESSAGE value="Inicio segundo parcial" />
     <MESSAGE value="GuardarProductoSimpleTest.php" />
     <MESSAGE value="GuardarProductoSimpleTest.php 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductoSimpleTest.php 2.0" />
+    <MESSAGE value="GuardarProductoSimpleTest.php 3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductoSimpleTest.php 3.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604946764319">
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604952920748">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1604946764319" />
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1604952920748" />
     <state x="364" y="315" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604938381749">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="364" y="315" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.30.1366.738@0.30.1366.738" timestamp="1604938381749" />
-    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604944534035">
+    <state x="168" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604955512390">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604944534035" />
+    <state x="168" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1366.738@0.30.1366.738" timestamp="1604955512390" />
+    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604954767565">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604954767565" />
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1604936941152">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1604936941152" />
-    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604947157951">
+    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604954723093">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604947157951" />
+    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604954723093" />
     <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604940088351">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604952193619">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604940088351" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604944931994">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604952193619" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604953189179">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604944931994" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604953189179" />
   </component>
 </project>

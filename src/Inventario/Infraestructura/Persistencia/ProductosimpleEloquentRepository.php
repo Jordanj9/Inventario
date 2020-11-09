@@ -21,7 +21,7 @@ class ProductosimpleEloquentRepository implements IProductosimpleRepository
     public function save(ProductoSimple $simple): void
     {
         $this->model->fill($simple->toArray());
-        $this->model->save();
+        $result=$this->model->save();
     }
 
     public function search(string $nombre): ?ProductoSimple

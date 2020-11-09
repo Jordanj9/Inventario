@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Src\Inventario\Shared;
+namespace Src\Inventario\Shared\Domain;
 
 use DomainException;
 

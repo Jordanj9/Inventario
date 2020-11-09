@@ -4,7 +4,8 @@
 namespace Src\Inventario\Domain;
 
 
-use Src\Inventario\Shared\DomainError;
+
+use Src\Inventario\Shared\Domain\DomainError;
 
 class ProductoDuplicado extends DomainError
 {

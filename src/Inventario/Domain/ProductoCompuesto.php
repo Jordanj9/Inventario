@@ -56,16 +56,17 @@ class ProductoCompuesto extends Producto
         }
     }
 
+    //compuesto
     private function disminuirCantidad(int $cantidad): string {
         $message = 'El Nuevo stock de los productos: ';
         foreach ($this->ingredientes as $ingrediente) {
             if (is_a($ingrediente['producto'], ProductoSimple::class)) {
+               // $men = $ingrediente['producto']->salida($cantidad);
                 $cant = $ingrediente['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
                 $ingrediente['producto']->setCantidad($cant);
                 $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
             } else {
                 foreach ($ingrediente['producto']->getIngredientes() as $item) {
-                    //var_dump($item);
                     $cant = $item['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
                     $item['producto']->setCantidad($cant);
                     $message = $message . $item['producto']->getNombre() . ' es ' . $item['producto']->getCantidad() . ', ';

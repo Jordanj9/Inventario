@@ -22,9 +22,6 @@ class MovimientoInventario
         $this->tipo = $tipo;
     }
 
-    private function crearproducto(){
-        $producsimple = new ProductoSimple('');
-    }
 
     /**
      * @return int

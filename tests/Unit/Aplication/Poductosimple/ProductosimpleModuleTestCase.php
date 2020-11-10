@@ -28,7 +28,8 @@ class ProductosimpleModuleTestCase extends TestCase
     /**
      * @return MockInterface|IUnitOfWork
      */
-    protected function unitofwork(): MockInterface{
+    protected function unitofwork(): MockInterface
+    {
         return $this->unitofwork = $this->unitofwork ?: Mockery::mock(IUnitOfWork::class);
     }
 
@@ -50,18 +51,30 @@ class ProductosimpleModuleTestCase extends TestCase
             ->andReturn($producto);
     }
 
-    protected function shouldBegintransaction(){
+    protected function shouldSalida(ProductoSimple $simple, int $cantidad)
+    {
+        $this->repository()
+            ->shouldReceive('salida')
+            ->with(TestUtils::similarTo($simple), TestUtils::similarTo($cantidad))
+            ->once();
+    }
+
+    protected function shouldBegintransaction()
+    {
         $this->unitofwork()
             ->shouldReceive('beginTransaction')
             ->once();
     }
 
-    protected function shouldCommit(){
+    protected function shouldCommit()
+    {
         $this->unitofwork()
             ->shouldReceive('commit')
             ->once();
     }
-    protected function shouldRollback(){
+
+    protected function shouldRollback()
+    {
         $this->unitofwork()
             ->shouldReceive('rollback')
             ->once();

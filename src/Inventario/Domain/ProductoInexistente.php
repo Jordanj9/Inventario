@@ -28,6 +28,6 @@ class ProductoInexistente extends DomainError
 
     protected function errorMessage(): string
     {
-        return sprintf('El producto con el nombre <%s> ya se encuentra registrado.', $this->nombre);
+        return sprintf('El producto con el nombre <%s> no se encuentra registrado.', $this->nombre);
     }
 }

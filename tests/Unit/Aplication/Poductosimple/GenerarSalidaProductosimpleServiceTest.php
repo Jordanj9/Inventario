@@ -18,7 +18,7 @@ class GenerarSalidaProductosimpleServiceTest extends ProductosimpleModuleTestCas
 
     protected function setUp(): void
     {
-        $this->service = $this->service ?: new GenerarSalidaProductoSimpleService($this->repository(), $this->unitofwork());
+        $this->service = $this->service ?: new GenerarSalidaProductoSimpleService($this->repository(), $this->unitofwork(),$this->email());
         parent::setUp();
     }
 
@@ -30,9 +30,11 @@ class GenerarSalidaProductosimpleServiceTest extends ProductosimpleModuleTestCas
         $cantidad = 1;
         $producto = new ProductoSimple('GASEOSA', 2000, 5000, 2, 0, 'NO');
         $this->shouldBegintransaction();
-        $this->shouldSearch($producto->getNombre(),$producto);
-        $this->shouldSalida($producto,$cantidad);
+        $this->shouldSearch($producto->getNombre(), $producto);
+        $this->shouldSalida($producto, $cantidad);
         $this->shouldCommit();
-        $this->service->__invoke($producto->getNombre(),$cantidad);
+        $this->shouldEmail('jordan_j9@hotmail.com', 'NUEVA SALIDA', 'SALIO UN PRODUCO');
+        $this->shouldRollback();
+        $this->service->__invoke($producto->getNombre(), $cantidad);
     }
 }

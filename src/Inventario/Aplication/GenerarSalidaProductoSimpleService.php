@@ -6,6 +6,7 @@ namespace Src\Inventario\Aplication;
 
 use Src\Inventario\Domain\IProductosimpleRepository;
 use Src\Inventario\Domain\ProductoInexistente;
+use Src\Inventario\Shared\Domain\IEmailSender;
 use Src\Inventario\Shared\Domain\IUnitOfWork;
 use Exception;
 
@@ -13,16 +14,19 @@ class GenerarSalidaProductoSimpleService
 {
     private IProductosimpleRepository $repository;
     private IUnitOfWork $unitOfWork;
+    private IEmailSender $email;
 
     /**
      * GuardarProductoSimpleService constructor.
      * @param IProductosimpleRepository $repository
      * @param IUnitOfWork $unitOfWork
+     * @param IEmailSender $email
      */
-    public function __construct(IProductosimpleRepository $repository, IUnitOfWork $unitOfWork)
+    public function __construct(IProductosimpleRepository $repository, IUnitOfWork $unitOfWork, IEmailSender $email)
     {
         $this->repository = $repository;
         $this->unitOfWork = $unitOfWork;
+        $this->email = $email;
 
     }
 
@@ -35,12 +39,13 @@ class GenerarSalidaProductoSimpleService
         try {
             $this->unitOfWork->beginTransaction();
             $this->repository->salida($producto, $cantidad);
+            $mensaje = 'EL PRODUCTO ' . $nombre . ' GENERO UNA NUEVA SALIDA DE: ' . $cantidad;
             $this->unitOfWork->commit();
+            $this->email->enviarEmail('annaisa-12@hotmail.com', 'SALIDA DE PRODUCTO', $mensaje);
         } catch (Exception $exception) {
             $this->unitOfWork->rollback();
             return $exception->getMessage();
         }
-
     }
 
 }

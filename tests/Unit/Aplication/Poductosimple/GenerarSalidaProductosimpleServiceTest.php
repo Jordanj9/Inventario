@@ -34,6 +34,5 @@ class GenerarSalidaProductosimpleServiceTest extends ProductosimpleModuleTestCas
         $this->shouldSalida($producto,$cantidad);
         $this->shouldCommit();
         $this->service->__invoke($producto->getNombre(),$cantidad);
-
     }
 }

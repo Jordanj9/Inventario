@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use L5Swagger\L5SwaggerServiceProvider;
 use Src\Inventario\Domain\IProductosimpleRepository;
 use Src\Inventario\Infraestructura\Persistencia\ProductosimpleEloquentRepository;
 use Src\Inventario\Shared\Domain\IUnitOfWork;
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(IProductosimpleRepository::class, ProductosimpleEloquentRepository::class);
         $this->app->bind(IUnitOfWork::class, UnitOfWorkEloquent::class);
+        $this->app->register(L5SwaggerServiceProvider::class);
     }
 
     /**

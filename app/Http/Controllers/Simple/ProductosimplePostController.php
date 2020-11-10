@@ -9,6 +9,11 @@ use Src\Inventario\Aplication\GuardarProductoSimpleService;
 use Src\Inventario\Aplication\ProductoSimpleRequest;
 use Src\Inventario\Domain\ProductoDuplicado;
 
+/**
+ * @OA\Info(title="API Inventario", version="1.0")
+ *
+ * @OA\Serve(url="http://127.0.0.1:8000/swagger")
+ */
 class ProductosimplePostController extends Controller
 {
 
@@ -23,6 +28,22 @@ class ProductosimplePostController extends Controller
         $this->service = $service;
     }
 
+
+    /**
+     *  @OA\Post(
+     *     path="api/productosimple",
+     *     summary="Guardar producto simple",
+     *
+     *     @OA\Response(
+     *         response=201,
+     *         description="Se guardo correctamente."
+     *     ),
+     *     @OA\Response(
+     *         response="default",
+     *         description="Ha ocurrido un error."
+     *     )
+     * )
+     */
     public function __invoke(Request $request)
     {
         $productoRequest = new ProductoSimpleRequest($request->nombre, $request->costo, $request->precio, $request->cantidad, $request->preparacion);

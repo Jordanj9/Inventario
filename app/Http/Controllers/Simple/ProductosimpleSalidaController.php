@@ -9,6 +9,7 @@ use Src\Inventario\Aplication\GenerarSalidaProductoSimpleService;
 use Src\Inventario\Domain\ProductoDuplicado;
 use Src\Inventario\Domain\ProductoInexistente;
 
+
 class ProductosimpleSalidaController extends Controller
 {
     private GenerarSalidaProductoSimpleService $service;
@@ -22,6 +23,38 @@ class ProductosimpleSalidaController extends Controller
         $this->service = $service;
     }
 
+    /**
+     * @OA\Get(
+     *      path="api/productosimple/salida/{nombre}/{cantidad}",
+     *      summary="Get project information",
+     *      description="Returns project data",
+     *      @OA\Parameter(
+     *          name="nombre",
+     *          description="nombre del producto simple",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="cantidad",
+     *          description="cantidad del producto",
+     *          required=true,
+     *           in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *      @OA\Response(response=400, description="Bad request"),
+     *      @OA\Response(response=404, description="Resource Not Found"),
+     *
+     * )
+     */
     public function __invoke(string $nombre, int $cantidad)
     {
         try {

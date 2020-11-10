@@ -21,7 +21,7 @@ class ProductosimpleEloquentRepository implements IProductosimpleRepository
     public function save(ProductoSimple $simple): void
     {
         $this->model->fill($simple->toArray());
-        $result=$this->model->save();
+        $this->model->save();
     }
 
     public function search(string $nombre): ?ProductoSimple
@@ -32,11 +32,22 @@ class ProductosimpleEloquentRepository implements IProductosimpleRepository
 
     public function addEntrada(ProductoSimple $simple, int $cantidad): void
     {
+
         $movimiento = $simple->entrada($cantidad)['movimiento'];
         $mo = new MovimientoInventarioModel($movimiento->toArray());
         $mo->save();
-        $this->model->fill($simple->toArray());
+        //$this->model->fill($simple->toArray());
         $this->model->save();
+    }
+
+    public function salida(ProductoSimple $simple, int $cantidad): void
+    {
+        $this->model = ProductosimpleModel::find($simple->getId());
+        $movi = $simple->salida($cantidad)['movimiento'];
+        $this->model->cantidad = $simple->getCantidad();
+        $this->model->save();
+        $movimiento = new MovimientoInventarioModel($movi->toArray());
+        $movimiento->save();
     }
 
 }

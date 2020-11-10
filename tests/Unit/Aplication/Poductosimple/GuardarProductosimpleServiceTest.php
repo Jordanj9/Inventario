@@ -25,7 +25,7 @@ class GuardarProductosimpleServiceTest extends ProductosimpleModuleTestCase
     public function testGuardarProductosimple(): void
     {
         $request = new ProductoSimpleRequest('GASEOSA LITRO', 2000, 5000, 2, 'NO');
-        $producto = new ProductoSimple($request->getNombre(), $request->getCosto(), $request->getPrecio(), $request->getCantidad(), $request->getPreparacion());
+        $producto = new ProductoSimple($request->getNombre(), $request->getCosto(), $request->getPrecio(), $request->getCantidad(),0, $request->getPreparacion());
         $repository = $this->createMock(IProductosimpleRepository::class);
         $unitofwork = $this->createMock(IUnitOfWork::class);
         $service = new GuardarProductoSimpleService($repository, $unitofwork);
@@ -37,7 +37,7 @@ class GuardarProductosimpleServiceTest extends ProductosimpleModuleTestCase
     {
         $this->expectException(ProductoDuplicado::class);
         $request = new ProductoSimpleRequest('GASEOSA LITRO', 2000, 5000, 2, 'NO');
-        $producto = new ProductoSimple($request->getNombre(), $request->getCosto(), $request->getPrecio(), $request->getCantidad(), $request->getPreparacion());
+        $producto = new ProductoSimple($request->getNombre(), $request->getCosto(), $request->getPrecio(), $request->getCantidad(),0, $request->getPreparacion());
         $this->shouldSearch($request->getNombre(),$producto);
         $this->service->__invoke($request);
 

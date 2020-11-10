@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('/productosimple', 'Simple\ProductosimplePostController');
+Route::get('/productosimple/salida/{producto}/{cantidad}', 'Simple\ProductosimpleSalidaController');

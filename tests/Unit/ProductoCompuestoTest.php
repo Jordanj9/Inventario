@@ -36,9 +36,9 @@ class ProductoCompuestoTest extends TestCase
      * @test
      */
     public function testSalidaCorrectaProductoCompuesto(): void {
-        $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 'SI'), 'cantidad' => 1];
-        $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3, 'SI'), 'cantidad' => 1];
-        $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4,1, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3,2, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5,3, 'SI'), 'cantidad' => 1];
 
         $productoCompuesto = new ProductoCompuesto('perro sencillo', null, 5000, 0, $ingredientes, 'NO');
         $result = $productoCompuesto->salida(1);
@@ -65,10 +65,10 @@ class ProductoCompuestoTest extends TestCase
      * @test
      */
     public function testSalidaCorrectaProductoCompuestoCombo(): void {
-        $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 'SI'), 'cantidad' => 1];
-        $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3, 'SI'), 'cantidad' => 1];
-        $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5, 'SI'), 'cantidad' => 1];
-        $combo[] = ['producto' => new ProductoSimple('gaseosa litro', 2000, 5000, 2, 'NO'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('salchicha', 1000, null, 4, 1,'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('pan perro', 1000, null, 3,2, 'SI'), 'cantidad' => 1];
+        $ingredientes[] = ['producto' => new ProductoSimple('lamina de queso', 1000, null, 5,3, 'SI'), 'cantidad' => 1];
+        $combo[] = ['producto' => new ProductoSimple('gaseosa litro', 2000, 5000, 2, 4,'NO'), 'cantidad' => 1];
         $combo[] = ['producto' => new ProductoCompuesto('perro sencillo', null, 5000, 0, $ingredientes, 'NO'), 'cantidad' => 2];
         $productoCompuesto = new ProductoCompuesto('Combo para parejas', null, 12000, 0, $combo, 'SI');
         $result = $productoCompuesto->salida(1);

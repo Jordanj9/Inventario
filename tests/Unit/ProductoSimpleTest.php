@@ -27,7 +27,7 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testCantidadEntradaNegativaCero(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5,0, 'NO');
         $result = $productoSimple->entrada(0);
         $this->assertEquals('La cantidad es incorrecta', $result);
     }
@@ -45,7 +45,7 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testEntradaCorrecta(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 0,'NO');
         $result = $productoSimple->entrada(6);
         $this->assertEquals('El nuevo stock del producto gaseosa litro es 11', $result['mensaje']);
     }
@@ -61,7 +61,7 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testCantidadSalidaNegativaCero(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5, 'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 5,0, 'NO');
         $result = $productoSimple->salida(0);
         $this->assertEquals('La cantidad es incorrecta', $result);
     }
@@ -80,8 +80,8 @@ class ProductoSimpleTest extends TestCase
      * @test
      */
     public function testSalidaCorrectaProductoSimple(): void {
-        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 4, 'NO');
+        $productoSimple = new ProductoSimple('gaseosa litro', 2000, 5000, 4,1, 'NO');
         $result = $productoSimple->salida(2);
-        $this->assertEquals('El nuevo stock del producto gaseosa litro es 2', $result);
+        $this->assertEquals('El nuevo stock del producto gaseosa litro es 2', $result['mensaje']);
     }
 }

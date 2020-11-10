@@ -5,12 +5,11 @@ namespace Src\Inventario\Aplication;
 
 
 use Src\Inventario\Domain\IProductosimpleRepository;
-use Src\Inventario\Domain\ProductoDuplicado;
-use Src\Inventario\Domain\ProductoSimple;
+use Src\Inventario\Domain\ProductoInexistente;
 use Src\Inventario\Shared\Domain\IUnitOfWork;
 use Exception;
 
-class GuardarProductoSimpleService
+class GenerarSalidaProductoSimpleService
 {
     private IProductosimpleRepository $repository;
     private IUnitOfWork $unitOfWork;
@@ -27,22 +26,21 @@ class GuardarProductoSimpleService
 
     }
 
-    public function __invoke(ProductoSimpleRequest $request)
+    public function __invoke(string $nombre, int $cantidad)
     {
-        $producto = $this->repository->search($request->getNombre());
-        if ($producto != null)
-            throw new ProductoDuplicado($request->getNombre());
+        $producto = $this->repository->search($nombre);
+        if ($producto == null)
+            throw new ProductoInexistente($nombre);
 
         try {
             $this->unitOfWork->beginTransaction();
-            $producto = new ProductoSimple($request->getNombre(),$request->getCosto(),$request->getPrecio(),$request->getCantidad(),0,$request->getPreparacion());
-            $this->repository->save($producto);
-            $this->repository->addEntrada($producto, $producto->getCantidad());
+            $this->repository->salida($producto, $cantidad);
             $this->unitOfWork->commit();
         } catch (Exception $exception) {
             $this->unitOfWork->rollback();
             return $exception->getMessage();
         }
+
     }
 
 }

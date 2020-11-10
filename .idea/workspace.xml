@@ -19,11 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductosimpleServiceTest.php">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="GuardarProductosimpleServiceTest.php 2.0">
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GenerarSalidaProductoSimpleService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoInexistente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GenerarSalidaProductoSimpleTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/Producto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoCompuestoTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductoSimpleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +186,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,7 +217,8 @@
       <workItem from="1602107868211" duration="556000" />
       <workItem from="1602168998686" duration="8206000" />
       <workItem from="1602948065248" duration="732000" />
-      <workItem from="1604930152391" duration="24325000" />
+      <workItem from="1604930152391" duration="25624000" />
+      <workItem from="1604960653840" duration="6827000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -362,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604957823209</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="GuardarProductosimpleServiceTest.php 2.0">
+      <created>1604959382949</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1604959382949</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,13 +416,14 @@
     <MESSAGE value="GuardarProductoSimpleTest.php 2.0" />
     <MESSAGE value="GuardarProductoSimpleTest.php 3.0" />
     <MESSAGE value="GuardarProductosimpleServiceTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductosimpleServiceTest.php" />
+    <MESSAGE value="GuardarProductosimpleServiceTest.php 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuardarProductosimpleServiceTest.php 2.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604952920748">
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604965421135">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1604952920748" />
+    <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1604965421135" />
     <state x="364" y="315" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604938381749">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -412,29 +432,29 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="168" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1366.738@0.30.1366.738" timestamp="1604955512390" />
-    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604954767565">
+    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604960881283">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604954767565" />
+    <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604960881283" />
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1604936941152">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1604936941152" />
-    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604954723093">
+    <state x="451" y="106" key="NewPhpClassDialog" timestamp="1604962033913">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604954723093" />
+    <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604962033913" />
     <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604957845123">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604959389034">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604957845123" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604953189179">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604959389034" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604963379792">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604953189179" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1604963379792" />
   </component>
 </project>

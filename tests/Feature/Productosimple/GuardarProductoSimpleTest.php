@@ -10,7 +10,8 @@ use Tests\TestCase;
 
 class GuardarProductoSimpleTest extends TestCase
 {
-    use RefreshDatabase;
+
+   use RefreshDatabase;
 
     /**
      * @test

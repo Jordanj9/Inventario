@@ -37,7 +37,8 @@ class GuardarProductoSimpleService
             $this->unitOfWork->beginTransaction();
             $producto = new ProductoSimple($request->getNombre(),$request->getCosto(),$request->getPrecio(),$request->getCantidad(),0,$request->getPreparacion());
             $this->repository->save($producto);
-            $this->repository->addEntrada($producto, $producto->getCantidad());
+            $movimiento = $producto->entrada($producto->getCantidad())['movimiento'];
+            $this->repository->addEntrada($movimiento);
             $this->unitOfWork->commit();
         } catch (Exception $exception) {
             $this->unitOfWork->rollback();

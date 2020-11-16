@@ -9,11 +9,7 @@ use Src\Inventario\Aplication\GuardarProductoSimpleService;
 use Src\Inventario\Aplication\ProductoSimpleRequest;
 use Src\Inventario\Domain\ProductoDuplicado;
 
-/**
- * @OA\Info(title="API Inventario", version="1.0")
- *
- * @OA\Serve(url="http://127.0.0.1:8000/swagger")
- */
+
 class ProductosimplePostController extends Controller
 {
 
@@ -33,7 +29,51 @@ class ProductosimplePostController extends Controller
      *  @OA\Post(
      *     path="api/productosimple",
      *     summary="Guardar producto simple",
-     *
+     *     @OA\Parameter(
+     *          name="nombre",
+     *          description="nombre del producto simple",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="costo",
+     *          description="costo del producto simple",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="number"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="precio",
+     *          description="precio de venta del producto simple",
+     *          required=false,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="number"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="cantidad",
+     *          description="cantidad del producto simple",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="number"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="preparacion",
+     *          description="si el producto es de preparación (SI-NO)",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
      *     @OA\Response(
      *         response=201,
      *         description="Se guardo correctamente."

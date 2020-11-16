@@ -4,6 +4,7 @@
 namespace Tests\Unit\Aplication\Aplication\Poductosimple;
 
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Src\Inventario\Aplication\GuardarProductoSimpleService;
 use Src\Inventario\Aplication\ProductoSimpleRequest;
 use Src\Inventario\Domain\IProductosimpleRepository;

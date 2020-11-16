@@ -5,10 +5,8 @@ namespace Aplication\Poductosimple;
 
 
 use Src\Inventario\Aplication\GenerarSalidaProductoSimpleService;
-use Src\Inventario\Aplication\ProductoSimpleRequest;
-use Src\Inventario\Domain\IProductosimpleRepository;
+use Src\Inventario\Domain\MovimientoInventario;
 use Src\Inventario\Domain\ProductoSimple;
-use Src\Inventario\Shared\Domain\IUnitOfWork;
 use Tests\Unit\Aplication\Poductosimple\ProductosimpleModuleTestCase;
 
 class GenerarSalidaProductosimpleServiceTest extends ProductosimpleModuleTestCase
@@ -29,9 +27,11 @@ class GenerarSalidaProductosimpleServiceTest extends ProductosimpleModuleTestCas
     {
         $cantidad = 1;
         $producto = new ProductoSimple('GASEOSA', 2000, 5000, 2, 0, 'NO');
+        $movimiento = new MovimientoInventario($producto->getNombre(),$producto->getCosto(),$producto->getPrecio(),$cantidad,'SALIDA');
         $this->shouldBegintransaction();
         $this->shouldSearch($producto->getNombre(), $producto);
-        $this->shouldSalida($producto, $cantidad);
+        $this->shouldSave($producto);
+        $this->shouldSalida($movimiento);
         $this->shouldCommit();
         $this->shouldEmail('jordan_j9@hotmail.com', 'NUEVA SALIDA', 'SALIO UN PRODUCO');
         $this->shouldRollback();

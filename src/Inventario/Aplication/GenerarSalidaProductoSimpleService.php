@@ -38,7 +38,9 @@ class GenerarSalidaProductoSimpleService
 
         try {
             $this->unitOfWork->beginTransaction();
-            $this->repository->salida($producto, $cantidad);
+            $movimiento = $producto->salida($cantidad)['movimiento'];
+            $this->repository->save($producto);
+            $this->repository->salida($movimiento);
             $mensaje = 'EL PRODUCTO ' . $nombre . ' GENERO UNA NUEVA SALIDA DE: ' . $cantidad;
             $this->unitOfWork->commit();
             $this->email->enviarEmail('annaisa-12@hotmail.com', 'SALIDA DE PRODUCTO', $mensaje);

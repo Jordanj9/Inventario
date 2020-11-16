@@ -7,6 +7,7 @@ use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 use Src\Inventario\Domain\IProductosimpleRepository;
+use Src\Inventario\Domain\MovimientoInventario;
 use Src\Inventario\Domain\ProductoSimple;
 use Src\Inventario\Shared\Domain\IEmailSender;
 use Src\Inventario\Shared\Domain\IUnitOfWork;
@@ -61,11 +62,11 @@ class ProductosimpleModuleTestCase extends TestCase
             ->andReturn($producto);
     }
 
-    protected function shouldSalida(ProductoSimple $simple, int $cantidad)
+    protected function shouldSalida(MovimientoInventario $movimiento)
     {
         $this->repository()
             ->shouldReceive('salida')
-            ->with(TestUtils::similarTo($simple), TestUtils::similarTo($cantidad))
+            ->with(TestUtils::similarTo($movimiento))
             ->once();
     }
 

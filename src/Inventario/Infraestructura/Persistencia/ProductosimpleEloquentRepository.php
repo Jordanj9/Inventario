@@ -5,6 +5,7 @@ namespace Src\Inventario\Infraestructura\Persistencia;
 
 
 use Src\Inventario\Domain\IProductosimpleRepository;
+use Src\Inventario\Domain\MovimientoInventario;
 use Src\Inventario\Domain\ProductoSimple;
 use Src\Inventario\Infraestructura\Persistencia\Eloquent\MovimientoInventarioModel;
 use Src\Inventario\Infraestructura\Persistencia\Eloquent\ProductosimpleModel;
@@ -20,8 +21,14 @@ class ProductosimpleEloquentRepository implements IProductosimpleRepository
 
     public function save(ProductoSimple $simple): void
     {
-        $this->model->fill($simple->toArray());
-        $this->model->save();
+        $producto = ProductosimpleModel::find($simple->getId());
+        if($producto != null){
+            $producto->cantidad=$simple->getCantidad();
+            $producto->save();
+        }else{
+            $this->model->fill($simple->toArray());
+            $this->model->save();
+        }
     }
 
     public function search(string $nombre): ?ProductoSimple
@@ -30,23 +37,19 @@ class ProductosimpleEloquentRepository implements IProductosimpleRepository
         return $producto != null ? ProductoSimple::formtArray($producto->attributesToArray()) : null;
     }
 
-    public function addEntrada(ProductoSimple $simple, int $cantidad): void
+    public function addEntrada(MovimientoInventario $movimiento): void
     {
-
-        $movimiento = $simple->entrada($cantidad)['movimiento'];
         $mo = new MovimientoInventarioModel($movimiento->toArray());
         $mo->save();
-        //$this->model->fill($simple->toArray());
-        $this->model->save();
     }
 
-    public function salida(ProductoSimple $simple, int $cantidad): void
+    public function salida(MovimientoInventario $movimiento): void
     {
-        $this->model = ProductosimpleModel::find($simple->getId());
-        $movi = $simple->salida($cantidad)['movimiento'];
-        $this->model->cantidad = $simple->getCantidad();
-        $this->model->save();
-        $movimiento = new MovimientoInventarioModel($movi->toArray());
+//        $this->model = ProductosimpleModel::find($simple->getId());
+//        $movi = $simple->salida($cantidad)['movimiento'];
+//        $this->model->cantidad = $simple->getCantidad();
+//        $this->model->save();
+        $movimiento = new MovimientoInventarioModel($movimiento->toArray());
         $movimiento->save();
     }
 

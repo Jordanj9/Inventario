@@ -14,6 +14,53 @@
             "post": {
                 "summary": "Guardar producto simple",
                 "operationId": "App\\Http\\Controllers\\Simple\\ProductosimplePostController::__invoke",
+                "parameters": [
+                    {
+                        "name": "nombre",
+                        "in": "path",
+                        "description": "nombre del producto simple",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "costo",
+                        "in": "path",
+                        "description": "costo del producto simple",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "precio",
+                        "in": "path",
+                        "description": "precio de venta del producto simple",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "cantidad",
+                        "in": "path",
+                        "description": "cantidad del producto simple",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "preparacion",
+                        "in": "path",
+                        "description": "si el producto es de preparación (SI-NO)",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "201": {
                         "description": "Se guardo correctamente."

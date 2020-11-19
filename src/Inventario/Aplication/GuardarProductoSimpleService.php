@@ -24,7 +24,6 @@ class GuardarProductoSimpleService
     {
         $this->repository = $repository;
         $this->unitOfWork = $unitOfWork;
-
     }
 
     public function __invoke(ProductoSimpleRequest $request)

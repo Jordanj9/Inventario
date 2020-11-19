@@ -24,6 +24,7 @@ class ProductoCompuesto extends Producto
         $this->combo = $combo;
     }
 
+
     private function calcularCosto(array $ingredientes) {
         $costo = 0;
         foreach ($ingredientes as $item) {
@@ -67,8 +68,9 @@ class ProductoCompuesto extends Producto
                 $message = $message . $ingrediente['producto']->getNombre() . ' es ' . $ingrediente['producto']->getCantidad() . ', ';
             } else {
                 foreach ($ingrediente['producto']->getIngredientes() as $item) {
-                    $cant = $item['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
-                    $item['producto']->setCantidad($cant);
+                    $item['producto']->disminuirCantidad($ingrediente['cantidad'] * $cantidad);
+//                    $cant = $item['producto']->getCantidad() - ($ingrediente['cantidad'] * $cantidad);
+//                    $item['producto']->setCantidad($cant);
                     $message = $message . $item['producto']->getNombre() . ' es ' . $item['producto']->getCantidad() . ', ';
                 }
             }

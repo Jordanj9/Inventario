@@ -82,7 +82,6 @@ class ProductoSimple extends Producto
                 'preparacion' => $this->getPreparacion()
             ];
         }
-
     }
 
     static function formtArray(array $model): self

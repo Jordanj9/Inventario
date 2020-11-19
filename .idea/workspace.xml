@@ -19,20 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="email">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de llamadas a metodos de entrada y salida de productos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Simple/ProductosimplePostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/l5-swagger.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/l5-swagger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GenerarSalidaProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GenerarSalidaProductoSimpleService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/IProductosimpleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Infraestructura/Persistencia/ProductosimpleEloquentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/api-docs/api-docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/api-docs/api-docs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GenerarSalidaProductosimpleServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GenerarSalidaProductosimpleServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/GuardarProductosimpleServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/ProductosimpleModuleTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Aplication/Poductosimple/ProductosimpleModuleTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +161,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cantera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -193,15 +184,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -230,7 +219,11 @@
       <workItem from="1605137620114" duration="692000" />
       <workItem from="1605139208607" duration="76000" />
       <workItem from="1605188640196" duration="8428000" />
-      <workItem from="1605481721547" duration="3953000" />
+      <workItem from="1605481721547" duration="4218000" />
+      <workItem from="1605529767315" duration="633000" />
+      <workItem from="1605661199320" duration="108000" />
+      <workItem from="1605661841040" duration="23000" />
+      <workItem from="1605742641699" duration="5201000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604977030797</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactorización de llamadas a metodos de entrada y salida de productos">
+      <created>1605485818403</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1605485818403</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,9 +461,14 @@
     <MESSAGE value="GenerarSalidaProductosimpleServiceTest.php" />
     <MESSAGE value="swagger implementacion" />
     <MESSAGE value="email" />
-    <option name="LAST_COMMIT_MESSAGE" value="email" />
+    <MESSAGE value="Refactorización de llamadas a metodos de entrada y salida de productos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactorización de llamadas a metodos de entrada y salida de productos" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605485969390">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1605485969390" />
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604974863633">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -492,13 +497,13 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604977034340">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605485836409">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1604977034340" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605481789386">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1605485836409" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605745616248">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1605481789386" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1605745616248" />
   </component>
 </project>

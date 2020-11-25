@@ -26,7 +26,7 @@ class GuardarProductoSimpleTest extends TestCase
             'preparacion' => 'NO'
         ]);
 
-        $response->assertStatus(Response::HTTP_CREATED);
+        $response->assertStatus(Response::HTTP_ALREADY_REPORTED);
 
     }
 

@@ -22,14 +22,28 @@
     <select />
   </component>
   <component name="BuildServerSettings">
-    <option name="LOGIN" />
-    <option name="SERVER_URL" />
+    <option name="LOGIN" value="jordan" />
+    <option name="SERVER_URL" value="http://localhost:12" />
+    <option name="COMMIT_PATTERN" value="{message}{changeLink}{changeId}" />
     <option name="REMEMBER_ME" value="false" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="1" />
+    <SELECTED_PROJECT id="project2" />
+    <SELECTED_TYPE id="bt2" />
     <treeState key="changes">
+      <expandedPath>
+        <pathElement>
+          <option name="myNodeId" value="1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ChangesGroupDescriptor" />
+        </pathElement>
+      </expandedPath>
       <selectedPath>
         <pathElement>
-          <option name="myNodeId" value="3" />
+          <option name="myNodeId" value="1" />
           <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ChangesGroupDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="3" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.VcsModificationDescriptor" />
         </pathElement>
       </selectedPath>
     </treeState>
@@ -49,10 +63,25 @@
         </pathElement>
       </selectedPath>
     </treeState>
+    <treeState key="selectConfigurations.run">
+      <expandedPath>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+      </expandedPath>
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de llamadas a metodos de entrada y salida de productos">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="TeamCity prueba 1 inventario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +95,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
@@ -200,7 +229,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.teamcityPluginOptions" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -220,6 +249,11 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SuitableConfigurationIdsCache">
+    <SERVER_URL values="http://localhost:12" />
+    <FIRST_MONTH_REVISION values="b6d17c1078d81a3ec0bcb254e31cc051259b584a" />
+    <SUITABLE_CONFIGURATIONS_IDS values="bt2" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="" />
@@ -247,7 +281,7 @@
       <workItem from="1605806677433" duration="939000" />
       <workItem from="1605982750546" duration="411000" />
       <workItem from="1606321151760" duration="2173000" />
-      <workItem from="1606326432318" duration="465000" />
+      <workItem from="1606326432318" duration="1103000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -452,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605747881294</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="TeamCity prueba 1 inventario">
+      <created>1606327022802</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1606327022802</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,13 +534,22 @@
     <MESSAGE value="swagger implementacion" />
     <MESSAGE value="email" />
     <MESSAGE value="Refactorización de llamadas a metodos de entrada y salida de productos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorización de llamadas a metodos de entrada y salida de productos" />
+    <MESSAGE value="TeamCity prueba 1 inventario" />
+    <option name="LAST_COMMIT_MESSAGE" value="TeamCity prueba 1 inventario" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605806801562">
+    <state x="400" y="54" key="#CLI_Interpreters" timestamp="1606327308722">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1605806801562" />
+    <state x="400" y="54" key="#CLI_Interpreters/0.30.1366.738@0.30.1366.738" timestamp="1606327308722" />
+    <state x="539" y="30" key="#PHP" timestamp="1606327312455">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="539" y="30" key="#PHP/0.30.1366.738@0.30.1366.738" timestamp="1606327312455" />
+    <state x="26" y="30" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606327387642">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="26" y="30" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1606327387642" />
     <state x="511" y="234" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1606326493096">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -520,10 +570,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604973526457" />
-    <state x="257" y="30" key="CommitChangelistDialog2" timestamp="1606326316019">
+    <state x="257" y="30" key="CommitChangelistDialog2" timestamp="1606327391993">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="257" y="30" key="CommitChangelistDialog2/0.30.1366.738@0.30.1366.738" timestamp="1606326316019" />
+    <state x="257" y="30" key="CommitChangelistDialog2/0.30.1366.738@0.30.1366.738" timestamp="1606327391993" />
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1605485350033">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -532,17 +582,21 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="451" y="106" key="NewPhpClassDialog/0.30.1366.738@0.30.1366.738" timestamp="1604974848794" />
-    <state x="184" y="44" key="SettingsEditor" timestamp="1601932372210">
+    <state x="184" y="44" key="SettingsEditor" timestamp="1606327158346">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
+    <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1606327158346" />
     <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605747891364">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1605747891364" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606326665952">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606327471510">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1606326665952" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1606327471510" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -18,12 +21,38 @@
     </expand>
     <select />
   </component>
+  <component name="BuildServerSettings">
+    <option name="LOGIN" />
+    <option name="SERVER_URL" />
+    <option name="REMEMBER_ME" value="false" />
+    <treeState key="changes">
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="3" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ChangesGroupDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+    <treeState key="project">
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="project1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+    <treeState key="responsibilities">
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="helperText" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.LinkedTextDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="Refactorización de llamadas a metodos de entrada y salida de productos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Aplication/GuardarProductoSimpleService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoCompuesto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario/Domain/ProductoSimple.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +186,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -184,17 +214,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -223,7 +242,12 @@
       <workItem from="1605529767315" duration="633000" />
       <workItem from="1605661199320" duration="108000" />
       <workItem from="1605661841040" duration="23000" />
-      <workItem from="1605742641699" duration="5201000" />
+      <workItem from="1605742641699" duration="5259000" />
+      <workItem from="1605795794070" duration="1255000" />
+      <workItem from="1605806677433" duration="939000" />
+      <workItem from="1605982750546" duration="411000" />
+      <workItem from="1606321151760" duration="2173000" />
+      <workItem from="1606326432318" duration="465000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -421,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605485818403</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Refactorización de llamadas a metodos de entrada y salida de productos">
+      <created>1605747881294</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1605747881294</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,10 +496,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Refactorización de llamadas a metodos de entrada y salida de productos" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605485969390">
+    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605806801562">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1605485969390" />
+    <state x="275" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1605806801562" />
+    <state x="511" y="234" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1606326493096">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="511" y="234" key="#com.intellij.ide.actions.DebugLogConfigureAction/0.30.1366.738@0.30.1366.738" timestamp="1606326493096" />
     <state x="487" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1604974863633">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -485,6 +520,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="413" y="154" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1604973526457" />
+    <state x="257" y="30" key="CommitChangelistDialog2" timestamp="1606326316019">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="257" y="30" key="CommitChangelistDialog2/0.30.1366.738@0.30.1366.738" timestamp="1606326316019" />
     <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1605485350033">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -497,13 +536,13 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1601932372210" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605485836409">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605747891364">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1605485836409" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605745616248">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1605747891364" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606326665952">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1605745616248" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1606326665952" />
   </component>
 </project>

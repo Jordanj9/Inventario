@@ -27,6 +27,7 @@
     <option name="COMMIT_PATTERN" value="{message}{changeLink}{changeId}" />
     <option name="REMEMBER_ME" value="false" />
     <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="1" />
     <SELECTED_PROJECT id="project2" />
     <SELECTED_TYPE id="bt2" />
     <treeState key="changes">
@@ -42,7 +43,7 @@
           <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ChangesGroupDescriptor" />
         </pathElement>
         <pathElement>
-          <option name="myNodeId" value="5" />
+          <option name="myNodeId" value="6" />
           <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.VcsModificationDescriptor" />
         </pathElement>
       </selectedPath>
@@ -58,10 +59,6 @@
         <pathElement>
           <option name="myNodeId" value="project2" />
           <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
-        </pathElement>
-        <pathElement>
-          <option name="myNodeId" value="bt2" />
-          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.BuildTypeDescriptor" />
         </pathElement>
       </selectedPath>
     </treeState>
@@ -93,9 +90,9 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="TeamCity prueba 4 inventario no notificacion">
+    <list default="true" id="18ce213f-67ff-4ec3-9cd6-21cacb1e3f0c" name="Default Changelist" comment="TeamCity prueba 5 inventario no notificacion">
+      <change afterPath="$PROJECT_DIR$/Inventario.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Productosimple/GuardarProductoSimpleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +102,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="OpenAPI" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -257,17 +261,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -306,7 +299,7 @@
       <workItem from="1605806677433" duration="939000" />
       <workItem from="1605982750546" duration="411000" />
       <workItem from="1606321151760" duration="2173000" />
-      <workItem from="1606326432318" duration="4717000" />
+      <workItem from="1606326432318" duration="7693000" />
     </task>
     <task id="LOCAL-00001" summary="Primer caso de prueba">
       <created>1601924862774</created>
@@ -539,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606329188270</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="TeamCity prueba 5 inventario no notificacion">
+      <created>1606331654551</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1606331654551</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +558,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Primer caso de prueba v2.0" />
     <MESSAGE value="Segundo caso de prueba v1.0" />
     <MESSAGE value="Segundo caso de prueba v2.0" />
     <MESSAGE value="Tercer caso de prueba v1.0" />
@@ -583,7 +582,8 @@
     <MESSAGE value="TeamCity prueba 2 inventario" />
     <MESSAGE value="TeamCity prueba 3 inventario" />
     <MESSAGE value="TeamCity prueba 4 inventario no notificacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="TeamCity prueba 4 inventario no notificacion" />
+    <MESSAGE value="TeamCity prueba 5 inventario no notificacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="TeamCity prueba 5 inventario no notificacion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="400" y="54" key="#CLI_Interpreters" timestamp="1606327308722">
@@ -634,14 +634,14 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="184" y="44" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1606331611498" />
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1606329384055">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2" timestamp="1606333244972">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1606329384055" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606331450340">
+    <state x="275" y="128" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1606333244972" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606333672241">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1606331450340" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1606333672241" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
